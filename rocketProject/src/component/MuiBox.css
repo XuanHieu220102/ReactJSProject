@@ -1,0 +1,54 @@
+.box {
+    margin-left: 0;
+    margin-top: 20px;
+    background-color: rgb(255,255,255);
+    /* padding: 10px 10px; */
+    padding: 10px 25px;
+    border-radius:1rem;       
+}
+
+.mui-box {
+    padding: 0 5px;
+    width: 350px;
+    height: auto;
+    font-size: 18px;
+    /* background-color: #e4b1b1; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+
+.mui-box-1 p{
+    margin: 0;
+}
+.mui-box-1 h2{
+    margin: 0;
+}
+
+
+.mui-box-2 {
+    width: 60px;
+    height: 60px;
+    background-color: black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15%;
+}
+.money-icon {   
+    font-size: 30px;
+    color: #fff;
+}
+
+.per {
+    font-size: 18px;
+    color: rgb(161,224,80);
+}
+
+.per-sub {
+    font-size: 18px;
+    color: red;
+}

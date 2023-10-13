@@ -1,0 +1,129 @@
+/* Căn giữa phần đăng nhập/đăng ký */
+body{
+  background-color: #f7f3f3;
+  /* background-color: black; */
+}
+.login-form {
+    text-align: center;
+    margin:auto;
+    width: 650px;
+    background-color:#fff;
+    padding: 100px;
+    padding-top: 50px;
+    height: 680px;
+    border-radius: 10px;
+  }
+  
+  .i-per{
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .icon-person {
+    font-size: 26px;
+    color: #fff;
+  }
+  /* Style cho tiêu đề (Đăng Nhập hoặc Đăng Ký) */
+  .login-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style cho các input và label */
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+  } */
+  
+  /* Style cho các nút */
+  .form-actions {
+    margin-top: 20px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    font-size: 18px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none; /* Loại bỏ đường viền xung quanh khi được tập trung */
+    transition: border-color 0.2s;
+  }
+  
+  /* Tạo hiệu ứng hover khi di chuột vào input */
+  input[type="text"]:hover, input[type="password"]:hover {
+    border-color: #666;
+  }
+  
+  /* Tạo hiệu ứng focus khi input được tập trung */
+  input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+
+  
+  /* Style cho nút chuyển đổi giữa Đăng Nhập và Đăng Ký */
+  button[type="button"] {
+    background-color: #fff;
+    color: #007bff;
+    margin-right: 10px;
+    border: 1px solid #007bff;
+  }
+  
+  /* Style cho nút Quên Mật Khẩu */
+  button[type="button"]:last-child {
+    margin-right: 0;
+  }
+  
+  /* Hover effect cho nút chuyển đổi */
+  button[type="button"]:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  button[type="submit"],
+  button[type="button"] {
+    height: 40px;
+    width: auto;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+    button[type="submit"] {
+    background-color: #007bff; /* Màu nút Đăng Nhập hoặc Đăng Ký */
+    color: #fff;
+    width: 200px;
+    height: 50px;
+  }
+  .actions1 {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  .actions2 {
+    display: flex;
+    justify-content: space-between;
+  }

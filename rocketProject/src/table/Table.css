@@ -1,0 +1,18 @@
+button[type="submit"], button[type="button"] {
+    padding: 0px 10px;
+}
+
+.css-dev-only-do-not-override-pr0fja {
+    font-size: 16px;
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.ant-tag-green {
+    margin-left: 5px;
+}
+
+.ant-btn-default {
+    margin-left: auto;
+    margin-right: auto;
+}

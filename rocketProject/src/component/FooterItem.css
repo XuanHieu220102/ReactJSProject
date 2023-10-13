@@ -1,0 +1,58 @@
+.footer-contain {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.abc {
+    font-size: 18px;
+}
+.box-item {
+    width: 20%;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 5px;
+    position: relative;
+}
+
+.ctn {
+    position: absolute;
+    bottom: 15px;
+    width: 80%;
+    height: 8px;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.skill {
+    color: white;
+}
+
+.User {
+    width: 60%;
+    height: 8px;
+    border-radius: 1rem;
+    background-color: black;
+}
+
+.Click {
+    width: 70%;
+    height: 8px;
+    border-radius: 1rem;
+    background-color: black;
+}
+
+.Sales {
+    width: 40%;
+    height: 8px;
+    border-radius: 1rem;
+    background-color: black;
+}
+
+.Items {
+    width: 80%;
+    height: 8px;
+    border-radius: 1rem;
+    background-color: black;
+}

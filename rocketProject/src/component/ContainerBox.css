@@ -1,0 +1,15 @@
+.container-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and ( max-width: 1880px) {
+    .container-box{
+        flex-wrap: wrap;
+    }
+}
+
+
+.header-container {
+    margin-right: 20px;
+}
