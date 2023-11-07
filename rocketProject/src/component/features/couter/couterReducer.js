@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const counterSlice = createSlice(
-    {
+  {
   name: 'counter',
   // gia tri state ban dau
   initialState: {

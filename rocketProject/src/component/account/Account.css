@@ -1,0 +1,72 @@
+.account-infor {
+    width: 50%;
+    height: 80%;
+    background-color:#fff;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 1px 1px 1px 1px rgba(5, 5, 5, 0.3);
+    display: flex;
+    padding-top: 30px;
+    flex-direction: column;
+    padding:30px 150px;
+}
+
+.account-title {
+    text-align: center;
+    font-size: 36px;
+    color:red;
+}
+
+#picture-user{
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-left: 32%;
+}
+
+label {
+    display: inline-block;
+    width: 110px;
+}
+
+.input-infor{
+    width: 70%;
+}
+
+.save-btn {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    padding: 8px 20px;
+    background-color: #fff;
+    color: #000;
+}
+
+.save-btn:hover{
+    background-color: #000;
+    color: #fff;
+    border-radius: #000;
+}
+
+.change-password {
+    width: auto;
+    background-color: #fff;
+    color: #000;
+    padding: 8px 20px;
+
+    margin-left: 15px;
+}
+
+.change-password:hover{
+    background-color: #000;
+    color: #fff;
+    border-radius: #000;
+}
+
+.btn-infor {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}

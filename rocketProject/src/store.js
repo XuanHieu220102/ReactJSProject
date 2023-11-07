@@ -1,8 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import CouterReducer from "./component/features/couter/couterReducer";
+import RecalApiLoading from "./component/features/apiSave/recalApiLoading"
+
 
 export default configureStore({
-    reducer:{
-        counter: CouterReducer
-    }
+    reducer: {
+        apiSave: RecalApiLoading,
+        counter: CouterReducer,
+      },
 })

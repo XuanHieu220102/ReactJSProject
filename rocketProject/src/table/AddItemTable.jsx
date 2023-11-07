@@ -5,6 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Alert, Space } from 'antd';
 import { fa } from "faker/lib/locales";
+import instance from "../api/api";
 
 
 export default function AddItemTable() {
@@ -24,25 +25,32 @@ export default function AddItemTable() {
     const [data, setDataTable] = useState([]);
     const apiGroup = 'http://localhost:8080/api/v1/group';
     // const api = 'https://64e5f67f09e64530d17f54dc.mockapi.io/rocket35class';
-    const apiCall = () => {
-        const token = localStorage.getItem('token')
-        axios.get(apiGroup).then(res => {
-            setDataTable(res?.data.content);
-        }).catch(err => {          
-            console.log(err);
-        })
-    }
+    // const apiCall = () => {
+    //     const token = localStorage.getItem('token')
+    //     axios.get(apiGroup).then(res => {
+    //         setDataTable(res?.data.content);
+    //     }).catch(err => {
+    //         console.log(err);
+    //     })
+    // }
     const [kt, setKt] = useState(false)
-        useEffect(() => {
-            apiCall();
-        }, []);
+    useEffect(() => {
+        instance.get("group?size=99")
+        .then(res => {
+            setDataTable(res?.data.content)
+        })
+        .catch(err =>{
+            console.log("Error: ", err);
+        })
+    }, []);
     const AddItem = () => {
         setKt(false);
-
+        let userId = localStorage.getItem('userId');
         const result = {
             groupName: groupNameRef.current.value,
             groupMember: groupMemberRef.current.value,
-            userId: localStorage.getItem('userId')
+            // userId: localStorage.getItem('userId')
+            userId: userId
         }
         console.log(result);
         const { groupName, groupMember } = result;
@@ -63,26 +71,37 @@ export default function AddItemTable() {
             return;
         }
         data.forEach(e => {
-            if(e.groupName === groupName){
+            if (e.groupName === groupName) {
                 alert("Group name đã tồn tại");
                 setKt(true)
             }
             return;
         })
-        if(kt === true){
+        if (kt === true) {
             return;
         }
-        axios.post(api, result)
-            .then(response => {
-                console.log(response.status);
-                if (response.status == 200) {
-                    alert("Add success fully")
-                    redirectUrl("/Table")
-                }
-            })
-            .catch(err => {
-                console.log(err);
-            })
+        // axios.post(api, result)
+            // .then(response => {
+            //     console.log(response.status);
+            //     if (response.status == 200) {
+            //         alert("Add success fully")
+            //         redirectUrl("/Table")
+            //     }
+            // })
+            // .catch(err => {
+            //     console.log(err);
+            // })
+        instance.post("group/add", result)
+        .then(response => {
+            console.log(response.status);
+            if (response.status == 200) {
+                alert("Add success fully")
+                redirectUrl("/Table")
+            }
+        })
+        .catch(err => {
+            console.log(err);
+        })
     }
 
     return (

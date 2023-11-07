@@ -1,0 +1,17 @@
+.logout {
+    cursor: pointer;
+}
+
+.logout:hover{
+    background-color: pink;
+}
+
+.newAddItem {
+    text-decoration: none;
+}
+
+#btn-newItem {
+    background-color:aqua;
+    height: 40px;
+    color: blue;
+}

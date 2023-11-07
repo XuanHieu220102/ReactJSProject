@@ -1,10 +1,18 @@
 import { ControlOutlined, CiCircleOutlined, CompassOutlined, DatabaseOutlined  } from '@ant-design/icons';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
+import { useAuth } from '../main';
+import './root.css';
 export default function Root() {
+    let authStore = useAuth();
+    let navigate = useNavigate();
+    const logoutPage = () => {
+      authStore.signout(navigate);
+    } 
+
     return (
       <>
         <div id="sidebar">
-          <h1>React Router Contacts</h1>
+          <h1 className='logout' onClick={() => {logoutPage()}}>LOG OUT</h1>
           <div>
             <form id="search-form" role="search">
               <input
@@ -25,7 +33,7 @@ export default function Root() {
               ></div>
             </form>
             <form method="post">
-              <button type="submit" style={{width:"100px"}}>New</button>
+              <button id='btn-newItem' type="submit" style={{width:"100px"}}> <Link className='newAddItem' to={`/addItemTable`}>New</Link> </button>
             </form>
           </div>
           <nav>
@@ -43,10 +51,7 @@ export default function Root() {
                 <Link to={`/Table`}><CompassOutlined />Table</Link>
               </li>
               <li>
-                <Link to={`/state`}><DatabaseOutlined />State</Link>
-              </li>
-              <li>
-                <Link to={`/logout`}><DatabaseOutlined />Log out</Link>
+                <Link to={`/account`}><DatabaseOutlined />Account</Link>
               </li>
             </ul>
           </nav>

@@ -40,10 +40,11 @@
     height: 20px;
     display: block;
     padding-top: 5px;
-    color: brown;
+    color: black;
 }
 .user-name {
     margin-right: 10px;
+    color: black;
 }
 
 .title-header{
